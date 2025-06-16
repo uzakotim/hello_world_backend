@@ -1,0 +1,36 @@
+{
+  "name": "tomatoes-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "convex:dev": "npx convex dev",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "api",
+    "crud",
+    "tomatoes",
+    "convex",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "A CRUD API for managing tomatoes using Convex DB",
+  "dependencies": {
+    "convex": "^1.24.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/supertest": "^6.0.3",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.1",
+    "vitest": "^3.2.3"
+  }
+}
