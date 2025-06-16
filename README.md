@@ -173,6 +173,9 @@ curl -X DELETE http://localhost:3000/tomatoes/k123456789
 - `npm start` - Start the production server
 - `npm run dev` - Start the development server with hot reload
 - `npm run convex:dev` - Start Convex development server
+- `npm test` - Run the test suite
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Run tests with coverage report
 
 ### Project Structure
 ```
@@ -182,12 +185,49 @@ tomatoes-api/
 │   └── tomatoes.ts        # Convex functions (queries & mutations)
 ├── routes/
 │   └── tomatoes.js        # Express routes for tomatoes
+├── tests/
+│   ├── api.test.js        # API endpoint tests
+│   ├── convex.test.js     # Convex function tests
+│   ├── performance.test.js # Performance tests
+│   ├── setup.js           # Test setup and mocks
+│   ├── app.js             # Test application
+│   └── README.md          # Test documentation
 ├── index.js               # Main server file
 ├── package.json
+├── vitest.config.js       # Test configuration
 ├── convex.json           # Convex configuration
 ├── .env.example          # Environment variables template
 └── README.md
 ```
+
+### Testing
+
+The project includes a comprehensive test suite with:
+
+- **API Tests**: Test all endpoints for correct functionality
+- **Unit Tests**: Test individual Convex functions
+- **Performance Tests**: Validate response times and concurrent handling
+- **Integration Tests**: Test complete CRUD workflows
+
+**Running Tests:**
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode (for development)
+npm run test:watch
+
+# Run tests with coverage report
+npm run test:coverage
+```
+
+**Test Coverage:**
+- 52 tests covering all API endpoints
+- Mock Convex database for isolated testing
+- Performance benchmarks for response times
+- Memory usage and concurrency testing
+
+See `tests/README.md` for detailed test documentation.
 
 ## Error Handling
 

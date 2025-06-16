@@ -151,9 +151,11 @@ describe('Tomatoes API', () => {
         name: 'Roma Tomato',
         variety: 'San Marzano',
         price: 3.50,
-        inStock: true, // Default value
-        description: undefined
+        inStock: true // Default value
       });
+      
+      // Description should either be undefined or not present
+      expect(response.body.data.description).toBeUndefined();
     });
 
     it('should return 400 when name is missing', async () => {
